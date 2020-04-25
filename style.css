@@ -1,0 +1,158 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcdfe3;
+}
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main header {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: hotpink;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+main header .chuck {
+    height: 300px;
+}
+main header figcaption {
+    text-align: center;
+    font-size: 1.2em;
+    color: gold;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+from {
+    text-shadow: 0 0 10px red, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+main header .chuck:hover {
+/* Start the shake animation and make the animation last for 0.5 seconds */
+animation: shake 0.5s;
+/* When the animation is finished, start again */
+animation-iteration-count: infinite;
+cursor: pointer;
+}
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+main header h1 {
+    font-family: 'Bungee Inline', cursive;
+    color: goldenrod;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+main section {
+    flex-grow: 9;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: gold;
+}
+main section #jokesContainer {
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    height: 60%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dcdfe3;
+}
+main section #jokesContainer p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+main section #generator {
+    border: 1px solid black;
+    padding: 15px 30px 15px 30px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    background-color: red;
+    color: hotpink;
+}
+main section #generator:hover {
+    background-color: hotpink;
+    color: red;
+}
+
+/* media queries */
+@media screen and (max-width: 480px) {
+    main header {
+        width: 80%;
+    }   
+    main section {
+        width: 80%;
+        flex-grow: 2;
+    }
+    main header .chuck {
+        height: 250px;
+    }
+    main header h1 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+    main section #jokesContainer {
+        border: 1px solid rgba(0, 0, 0, 0.233);
+        height: 40%;
+        width: 70%;
+    }   
+    main section #generator {
+        border: 1px solid black;
+        padding: 5px 20px 5px 20px;
+        border-radius: 5px;
+        font-size: 1.2em;
+    }    
+    main section #jokesContainer p {
+        font-size: 90%;       
+    }
+}
